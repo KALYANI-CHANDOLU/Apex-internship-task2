@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Validation & To-Do List</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <div class="container">
+    <form id="userForm">
+      <label for="name">Name:</label>
+      <div>
+        <input type="text" id="name" name="name" required>
+        <div class="error" id="nameError"></div>
+      </div>
+
+      <label for="email">Email:</label>
+      <div>
+        <input type="email" id="email" name="email" required>
+        <div class="error" id="emailError"></div>
+      </div>
+
+      <label for="password">Password:</label>
+      <div>
+        <input type="password" id="password" name="password" required>
+        <div class="error" id="passwordError"></div>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="todo-section">
+      <h3>To-Do List</h3>
+      <div class="todo-input-container">
+        <input type="text" id="todoInput" placeholder="Add an activity">
+        <button onclick="addTask()">+</button>
+      </div>
+      <div class="todo-list" id="todoList"></div>
+    </div>
+  </div>
+  <script src="valid.js"></script>
+</body>
+</html>
